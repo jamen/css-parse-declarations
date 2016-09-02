@@ -21,7 +21,7 @@ function parse(property) {
       else if (capturing === 'string' && list[i - 1] !== '\\') capturing = null
     }
     if (capturing !== 'function' && list[i] === ')') capturing = 'function';
-    if (list[i] === '(') capturing = null;
+    if (capturing === 'function' && list[i] === '(') capturing = null;
     if (i < 0 || list[i] === ' ' && !capturing) {
       var value = list.slice(i + 1, last);
       if (value) values.unshift(value);
