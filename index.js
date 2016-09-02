@@ -14,10 +14,14 @@ function parse(property) {
   if (list[i - 1] === ';') list = list.slice(0, -1);
   var values = [];
   var last = i;
-  var capturing = false;
+  var capturing = null;
   do {
-    if (list[i] === ')') capturing = true;
-    if (list[i] === '(') capturing = false;
+    if (list[i] === '"' || list[i] === "'") {
+      if (!capturing) capturing = 'string';
+      else if (capturing === 'string') capturing = null
+    }
+    if (capturing !== 'function' && list[i] === ')') capturing = 'function';
+    if (list[i] === '(') capturing = null;
     if (i < 0 || list[i] === ' ' && !capturing) {
       var value = list.slice(i + 1, last);
       if (value) values.unshift(value);
