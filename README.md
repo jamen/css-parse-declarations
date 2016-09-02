@@ -24,7 +24,7 @@ $ npm install --save css-parse-properties
 
 ### `parse(properties)`
 Parse properties into a `[name, values]` format (examples below).
- - properties ('String'|'Array'): A property or array of properties to parse.
+ - properties (`String`|`Array`): A property or array of properties to parse.
 
 ```js
 parse('margin: 1px 2px');

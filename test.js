@@ -13,5 +13,6 @@ test('parse properties', function(t) {
   t.same(parse('transform: scale(0.8) translate(-10px, 5px)'), ['transform', ['scale(0.8)', 'translate(-10px, 5px)']], 'parses multiple functions');
   t.same(parse('content: "Foo bar" \'bar qux\''), ['content', ['"Foo bar"', "'bar qux'"]], 'parses "content: "Foo bar" \'bar qux\'"');
   t.same(parse('background: url("blah foo.png") test(\'123 567\') 123'), ['background', ['url("blah foo.png")', 'test(\'123 567\')', '123']], 'parses multiple complex values');
+  t.same(parse('content: "foo \\" bar"'), ['content', ['"foo \\" bar"']], 'escaping quotes');
   t.end();
 });

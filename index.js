@@ -18,7 +18,7 @@ function parse(property) {
   do {
     if (list[i] === '"' || list[i] === "'") {
       if (!capturing) capturing = 'string';
-      else if (capturing === 'string') capturing = null
+      else if (capturing === 'string' && list[i - 1] !== '\\') capturing = null
     }
     if (capturing !== 'function' && list[i] === ')') capturing = 'function';
     if (list[i] === '(') capturing = null;
