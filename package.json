@@ -1,7 +1,7 @@
 {
   "name": "css-parse-properties",
   "description": "Parse CSS properties into a simple array.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://github.com/jamen/css-parse-properties",
   "author": "Jamen Marz (https://github.com/jamen)",
   "repository": "jamen/css-parse-properties",
