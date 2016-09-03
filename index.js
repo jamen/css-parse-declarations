@@ -7,6 +7,12 @@ module.exports = parse;
   */
 
 function parse(property) {
+  if (property instanceof Array) {
+    var output = [];
+    var index = property.length;
+    while (index--) output[index] = parse(property[index]);
+    return output;
+  }
   var center = property.indexOf(':');
   var name = property.slice(0, center);
   var list = property.slice(center + 1).trim();

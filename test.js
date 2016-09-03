@@ -14,5 +14,6 @@ test('parse properties', function(t) {
   t.same(parse('content: "Foo bar" \'bar qux\''), ['content', ['"Foo bar"', "'bar qux'"]], 'parses "content: "Foo bar" \'bar qux\'"');
   t.same(parse('background: url("blah foo.png") test(\'123 567\') 123'), ['background', ['url("blah foo.png")', 'test(\'123 567\')', '123']], 'parses multiple complex values');
   t.same(parse('content: "foo \\" bar"'), ['content', ['"foo \\" bar"']], 'escaping quotes');
+  t.same(parse(['x: y', 'a: b']), [['x', ['y']], ['a', ['b']]], 'parsing multiple');
   t.end();
 });
