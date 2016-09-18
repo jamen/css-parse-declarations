@@ -1,7 +1,7 @@
 {
   "name": "css-parse-declarations",
   "description": "Parse CSS declarations into a simple array.",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "homepage": "https://github.com/jamen/css-parse-declarations",
   "author": "Jamen Marz (https://github.com/jamen)",
   "repository": "jamen/css-parse-declarations",
