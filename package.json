@@ -1,12 +1,12 @@
 {
-  "name": "css-parse-properties",
-  "description": "Parse CSS properties into a simple array.",
+  "name": "css-parse-declarations",
+  "description": "Parse CSS declarations into a simple array.",
   "version": "0.1.5",
-  "homepage": "https://github.com/jamen/css-parse-properties",
+  "homepage": "https://github.com/jamen/css-parse-declarations",
   "author": "Jamen Marz (https://github.com/jamen)",
-  "repository": "jamen/css-parse-properties",
+  "repository": "jamen/css-parse-declarations",
   "bugs": {
-    "url": "https://github.com/jamen/css-parse-properties/issues"
+    "url": "https://github.com/jamen/css-parse-declarations/issues"
   },
   "main": "index.js",
   "files": [
@@ -22,7 +22,7 @@
   "keywords": [
     "css",
     "parse",
-    "properties"
+    "declarations"
   ],
   "devDependencies": {
     "tap-spec": "^4.1.1",

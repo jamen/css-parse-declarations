@@ -1,23 +1,26 @@
 module.exports = parse;
 
-/** @module css-parse-properties
+/** @module css-parse-declarations
   *
-  * Parse CSS properties into a simple array.
+  * Parse CSS declarations into a simple array.
   *
   */
 
-function parse(property) {
-  if (property instanceof Array) {
+function parse(declaration) {
+  if (declaration instanceof Array) {
     var output = [];
-    var index = property.length;
-    while (index--) output[index] = parse(property[index]);
+    var index = declaration.length;
+    while (index--) output[index] = parse(declaration[index]);
     return output;
   }
-  var center = property.indexOf(':');
-  var name = property.slice(0, center);
-  var list = property.slice(center + 1).trim();
+
+  var center = declaration.indexOf(':');
+  var property = declaration.slice(0, center);
+  var list = declaration.slice(center + 1).trim();
   var i = list.length;
+
   if (list[i - 1] === ';') list = list.slice(0, -1);
+
   var values = [];
   var last = i;
   var capturing = null;
@@ -34,5 +37,6 @@ function parse(property) {
       last = i;
     }
   } while (i-- > -1);
-  return [name, values];
+
+  return [property, values];
 };

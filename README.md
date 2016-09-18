@@ -1,6 +1,6 @@
-# css-parse-properties [![NPM version](https://badge.fury.io/js/css-parse-properties.svg)](https://npmjs.org/package/css-parse-properties) [![Build Status](https://travis-ci.org/jamen/css-parse-properties.svg?branch=master)](https://travis-ci.org/jamen/css-parse-properties)
+# css-parse-declarations [![NPM version](https://badge.fury.io/js/css-parse-declarations.svg)](https://npmjs.org/package/css-parse-declarations) [![Build Status](https://travis-ci.org/jamen/css-parse-declarations.svg?branch=master)](https://travis-ci.org/jamen/css-parse-declarations)
 
-> Parse CSS properties into a simple array structure.
+> Parse CSS declarations into a simple array structure.
 
 ```js
 parse('border: 1px solid red');
@@ -17,14 +17,14 @@ parse(['foo: bar oof', 'baz: qux']);
 ## Installation
 
 ```sh
-$ npm install --save css-parse-properties
+$ npm install --save css-parse-declarations
 ```
 
 ## API
 
-### `parse(properties)`
-Parse properties into a `[name, values]` format (examples below).
- - properties (`String`|`Array`): A property or array of properties to parse.
+### `parse(declarations)`
+Parse declarations into a `[name, values]` format (examples below).
+ - declarations (`String`|`Array`): A declaration or array of declarations to parse.
 
 ```js
 parse('margin: 1px 2px');
